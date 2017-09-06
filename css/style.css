@@ -1,0 +1,308 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    color: #23566a;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #54a6c9;
+}
+
+.img-box img {
+    display: block;
+    width: 100%;
+}
+
+img {
+    vertical-align: middle
+}
+
+.screen {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.screen1 {
+    background: url("../img/bg.png") center no-repeat #fff;
+    background-size: 100% 100%;
+
+}
+
+.logo {
+    width: 40%;
+    margin: 10% auto 5% auto
+}
+
+/* 文字说明背景 */
+.box-bg {
+    width: 70%;
+    padding: 3%;
+    margin: 0 auto 5% auto;
+    background: rgba(136, 193, 217, .8);
+    border: solid 1px #ccc;
+    border-radius: 20px;
+}
+
+.box-bg-top {
+    width: 75%;
+    margin-top: 15%
+}
+
+/* 文字说明样式1 带有图标的列表 */
+.box-text-1 {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.box-text-1 li {
+    position: relative;
+    padding-left: 4.5%;
+    letter-spacing: 3px;
+}
+
+.box-text-1 li i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4.5%;
+    content: '';
+}
+
+.box-text-1 li i img {
+    width: 60%;
+    vertical-align: inherit;
+}
+
+/* 文字说明样式2  文字剧中显示 */
+.box-text-2 {
+    padding: 2% 0 4% 0;
+    line-height: 200%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.box-text-2 p span {
+    color: #00479d;
+}
+
+/* 按钮样式 */
+.button-box {
+    width: 100%;
+    height: 9.5%;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    height: 100%;
+    background: #67c9dd;
+    /*color: #23566a;*/
+    color: #f2f8fb;
+    padding: 0 45px;
+    text-shadow: 2px 2px 2px #666;
+    letter-spacing: 20px;
+    text-indent: 20px;
+    border: solid 1px #41809b;
+    border-radius: 25px;
+    box-shadow: 0 5px 10px -3px #41809b;
+}
+
+.button-box-s .button {
+    margin: 0 3%;
+}
+
+/* 游戏结束 */
+.over-text {
+    margin: 20% auto 10% auto;
+    text-align: center;
+    font-size: 54px;
+    line-height: 80px;
+}
+
+/** 游戏界面 **/
+.part-btn-box {
+    position: fixed;
+    width: 50%;
+    height: 15%;
+    left: 25%;
+    bottom: 5%;
+    z-index: 1;
+    /*background: rgba(215, 241, 249, 0.8);*/
+}
+
+.part-btn-box li {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 100%;
+    background: url("../img/iconBg.png") center no-repeat;
+    background-size: 75% auto;
+}
+
+.part-btn-box li p {
+    display: block;
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 85% auto;
+}
+
+.part-text {
+    position: absolute;
+    top: 7%;
+    left: 25%;
+    z-index: 2;
+    width: 50%;
+    padding: 1% 0;
+    text-align: center;
+    background: rgba(147, 217, 231, .7);
+    color: #23566a;
+    line-height: 180%;
+    border-radius: 30px;
+    letter-spacing: 1px;
+}
+
+.part-text span {
+    color: #378ee0;
+}
+
+.leaf {
+    position: absolute;
+    top: 10%;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    background-color: red;
+}
+
+.leafA {
+    left: 21%
+}
+
+.leafB {
+    right: 21%
+}
+
+/** 叶子下落动画 **/
+.drop15 {
+    animation: dropMove 1.5s ease;
+    -webkit-animation: dropMove 1.5s linear;
+}
+
+.drop13 {
+    animation: dropMove 1.3s ease;
+    -webkit-animation: dropMove 1.3s linear;
+}
+
+.drop11 {
+    animation: dropMove 1.1s ease;
+    -webkit-animation: dropMove 1.1s linear;
+}
+
+.drop09 {
+    animation: dropMove .9s ease;
+    -webkit-animation: dropMove .9s linear;
+}
+
+@keyframes dropMove {
+    from {
+        top: 0
+    }
+    to {
+        top: 90%
+    }
+}
+
+@-webkit-keyframes dropMove {
+    from {
+        top: 0
+    }
+    to {
+        top: 90%
+    }
+}
+
+/** 降落过程禁止点击 **/
+.even-no {
+    pointer-events: none
+}
+
+/** 叶子素材 **/
+
+.s11 {
+    background-image: url("../img/tree/s11.png");
+}
+
+.s12 {
+    background-image: url("../img/tree/s12.png");
+}
+
+.s13 {
+    background-image: url("../img/tree/s13.png");
+}
+
+.s14 {
+    background-image: url("../img/tree/s14.png");
+}
+
+.s21 {
+    background-image: url("../img/tree/s21.png");
+}
+
+.s22 {
+    background-image: url("../img/tree/s22.png");
+}
+
+.s23 {
+    background-image: url("../img/tree/s23.png");
+}
+
+.s24 {
+    background-image: url("../img/tree/s24.png");
+}
+
+.s31 {
+    background-image: url("../img/tree/s31.png");
+}
+
+.s32 {
+    background-image: url("../img/tree/s32.png");
+}
+
+.s33 {
+    background-image: url("../img/tree/s33.png");
+}
+
+.s34 {
+    background-image: url("../img/tree/s34.png");
+}
+
+.s41 {
+    background-image: url("../img/tree/s41.png");
+}
+
+.s42 {
+    background-image: url("../img/tree/s42.png");
+}
+
+.s43 {
+    background-image: url("../img/tree/s43.png");
+}
+
+.s44 {
+    background-image: url("../img/tree/s44.png");
+}
