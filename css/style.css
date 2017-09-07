@@ -137,7 +137,7 @@ img {
     height: 15%;
     left: 25%;
     bottom: 5%;
-    z-index: 1;
+    z-index: 5;
     /*background: rgba(215, 241, 249, 0.8);*/
 }
 
@@ -179,62 +179,86 @@ img {
     color: #378ee0;
 }
 
+.leaf-box {
+    position: fixed;
+    top: -5%;
+    width: 70%;
+    height: 110%;
+    left: 15%;
+    z-index: 1;
+    /*background: rgba(147, 217, 231, .7);*/
+}
+
+.leaf.left {
+    left: 0
+}
+
+.leaf.right {
+    right: 0
+}
+
 .leaf {
     position: absolute;
-    top: 10%;
+    top: 100%;
+    width: 100%;
+    opacity: 1;
     z-index: 1;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% auto;
-    background-color: red;
 }
 
-.leafA {
-    left: 21%
-}
 
-.leafB {
-    right: 21%
-}
 
 /** 叶子下落动画 **/
-.drop15 {
-    animation: dropMove 1.5s ease;
-    -webkit-animation: dropMove 1.5s linear;
-}
-
-.drop13 {
-    animation: dropMove 1.3s ease;
-    -webkit-animation: dropMove 1.3s linear;
-}
-
-.drop11 {
-    animation: dropMove 1.1s ease;
-    -webkit-animation: dropMove 1.1s linear;
-}
-
-.drop09 {
-    animation: dropMove .9s ease;
-    -webkit-animation: dropMove .9s linear;
+.drop {
+    animation: dropMove 4s ease;
+    -webkit-animation: dropMove 4s linear;
 }
 
 @keyframes dropMove {
     from {
-        top: 0
+        top: 0;
+
+        transform: rotate(120deg);
+        -webkit-transform: rotate(120deg);
     }
     to {
-        top: 90%
+        top: 100%;
+
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
 }
 
 @-webkit-keyframes dropMove {
     from {
-        top: 0
+        top: 0;
+        transform: rotate(120deg);
+        -webkit-transform: rotate(120deg);
     }
     to {
-        top: 90%
+        top: 100%;
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
 }
+
+/** 叶子结果 **/
+.leaf.result:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    font-size: 100px;
+    color: yellow;
+    text-align: center;
+    content: attr(data-result);
+}
+
+
 
 /** 降落过程禁止点击 **/
 .even-no {
@@ -305,4 +329,15 @@ img {
 
 .s44 {
     background-image: url("../img/tree/s44.png");
+}
+
+
+/** 游戏暂停 **/
+.stop {
+    position: absolute;
+    top: 11%;
+    right: 7%;
+    width: 5%;
+    display: none;
+
 }
